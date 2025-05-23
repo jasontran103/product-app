@@ -1,0 +1,65 @@
+/* Header styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2.5rem;
+  background: #fff;
+  border-bottom: 1.5px solid #ececec;
+  box-shadow: none;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  min-height: 64px;
+}
+
+/* Logo styles */
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #222;
+  gap: 0.5rem;
+}
+.logo-icon {
+  font-size: 1.7rem;
+  color: #635bff;
+}
+.logo-text {
+  font-family: 'Inter', sans-serif;
+  color: #18181b;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+/* NavBar styles */
+.nav {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.nav a {
+  color: #374151;
+  text-decoration: none;
+  font-size: 1.18rem;
+  font-weight: 500;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  background: none;
+  transition: color 0.18s;
+  letter-spacing: 0.01em;
+}
+
+.nav a.active, .nav a:hover {
+  color: #635bff;
+  background: none;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+}
