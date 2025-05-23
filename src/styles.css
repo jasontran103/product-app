@@ -1,1 +1,116 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global styles */
+
+/* Root variables */
+:root {
+  --primary: #635bff;
+  --primary-hover: #4b3cff;
+  --gray-900: #18181b;
+  --gray-800: #222;
+  --gray-700: #374151;
+  --gray-600: #4B5563;
+  --gray-500: #6B7280;
+  --gray-300: #E5E7EB;
+  --gray-200: #F3F4F6;
+  --gray-100: #F9FAFB;
+  --radius: 16px;
+  --transition: 0.18s cubic-bezier(.4,0,.2,1);
+}
+
+/* Utility styles */
+html, body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: var(--gray-900);
+  background: #fff;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--gray-900);
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  letter-spacing: -0.02em;
+}
+
+h1 { font-size: 2.25rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.25rem; }
+
+p {
+  color: var(--gray-600);
+  margin-top: 0;
+  margin-bottom: 1.5em;
+}
+
+/* Button styles */
+.button, button, .btn {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition);
+  width: fit-content;
+  outline: none;
+}
+.button:hover, button:hover, .btn:hover {
+  background: var(--primary-hover);
+}
+
+/* Card styles */
+.card, .feature-card, .product-card, .detail-info-col {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.card:hover, .feature-card:hover, .product-card:hover, .detail-info-col:hover {
+  box-shadow: 0 4px 6px rgba(0,0,0,0.12);
+  transform: translateY(-2px);
+}
+
+/* Pill styles (Catergory) */
+.pill, .category-pill, .detail-category-pill {
+  background: var(--gray-200);
+  color: var(--primary);
+  border-radius: 24px;
+  padding: 8px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  display: inline-block;
+  border: none;
+  transition: background var(--transition), color var(--transition);
+}
+.pill.selected, .category-pill.selected, .detail-category-pill.selected {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* Divider styles */
+.divider, hr {
+  border: none;
+  height: 1px;
+  background: var(--gray-300);
+  margin: 24px 0;
+}
+
+/* Container styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.25rem; }
+  .container { padding: 0 12px; }
+}
