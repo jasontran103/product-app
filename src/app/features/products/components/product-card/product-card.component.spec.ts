@@ -1,0 +1,1 @@
+// This file would be used to test the product card component using unit testing

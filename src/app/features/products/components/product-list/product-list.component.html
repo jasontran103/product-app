@@ -1,0 +1,23 @@
+<div class="products-container">
+  <h1>Our Products</h1>
+  <p>Browse our selection of quality products</p>
+
+  <!-- Filtering by category -->
+  <div class="categories">
+    <span *ngFor="let category of categories" 
+          (click)="onCategorySelect(category)"
+          [class.selected]="selectedCategory === category"
+          class="category-pill">
+      {{ category }}
+    </span>
+  </div>
+
+  <!-- Displaying the products -->  
+  <div class="product-grid">
+    <app-product-card 
+      *ngFor="let product of filteredProducts"
+      [product]="product"
+      (viewDetails)="viewDetails(product)">
+    </app-product-card>
+  </div>
+</div>

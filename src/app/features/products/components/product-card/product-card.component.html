@@ -1,0 +1,16 @@
+<div class="product-card">
+  <div class="product-image-wrapper">
+    <img [src]="product.imageUrl" [alt]="product.name" class="product-image" />
+  </div>
+  <div class="product-info">
+    <div class="product-header">
+      <h2 class="product-title">{{ product.name }}</h2>
+      <span class="product-price">${{ product.price | number: '1.2-2' }}</span>
+    </div>
+    <div class="product-category">{{ product.category }}</div>
+    <p class="product-description">{{ product.description }}</p>
+    <hr class="divider" />
+    <!-- OnClick we will naviate to the view details page -->
+    <button class="view-details-btn" (click)="onViewDetails()">View Details</button>
+  </div>
+</div>

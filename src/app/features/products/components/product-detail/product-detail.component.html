@@ -1,0 +1,37 @@
+<!-- Render this if the product is not found -->
+<div *ngIf="notFound" class="not-found">
+  <h2>Product Not Found</h2>
+  <button (click)="goBack()">Back to Products</button>
+</div>
+
+<!-- Render this if the product is found -->
+<div *ngIf="product">
+  <div class="detail-back-row">
+    <button class="back-btn" (click)="goBack()">
+      ← Back to Products
+    </button>
+  </div>
+  <div class="product-detail-container">
+    <div class="product-detail-layout">
+      <div class="detail-image-col">
+        <img [src]="product.imageUrl" [alt]="product.name" class="detail-image" />
+      </div>
+      <div class="detail-info-col">
+        <div class="detail-header-row">
+          <span class="detail-category-pill">{{ product.category }}</span>
+          <span class="detail-price">${{ product.price | number: '1.2-2' }}</span>
+        </div>
+        <h1 class="detail-title">{{ product.name }}</h1>
+        <hr class="detail-divider" />
+        <div class="detail-desc-label">Description</div>
+        <div class="detail-description">{{ product.description }}</div>
+        <div class="detail-actions-row">
+          <!-- Todo: Add functionality to add to Cart button -->
+          <button class="add-cart-btn">Add to Cart</button>
+          <!-- Todo: Add functionality to add to Wishlist button -->
+          <button class="add-wishlist-btn">Add to Wishlist</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
