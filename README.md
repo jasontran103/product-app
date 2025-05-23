@@ -2,15 +2,46 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.12.
 
-## Development server
+## Running the Application Locally
 
-To start a local development server, run:
+Follow these steps to run the application on your local machine:
 
+### 1. Prerequisites
+- [Node.js](https://nodejs.org/) (v18 or higher recommended)
+- [npm](https://www.npmjs.com/) (comes with Node.js)
+- [Angular CLI](https://angular.dev/tools/cli) (install globally if not already)
+
+Install Angular CLI globally:
+```bash
+npm install -g @angular/cli
+```
+
+### 2. Clone the Repository
+If you haven't already, clone the repository:
+```bash
+git clone <repository-url>
+cd product-app
+```
+
+### 3. Install Dependencies
+Install all required npm packages:
+```bash
+npm install
+```
+
+### 4. Start the Development Server
+Run the following command to start the local dev server:
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+The app will be available at [http://localhost:4200](http://localhost:4200) by default.
+
+### 5. Make Changes
+- The app will automatically reload if you change any of the source files.
+- Main source code is in `src/app/`.
+
+---
 
 ## Code scaffolding
 
