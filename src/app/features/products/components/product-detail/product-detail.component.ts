@@ -14,6 +14,7 @@ import { ProductService, Product } from '../../services/product/product.service'
   templateUrl: './product-detail.component.html',
   styleUrls: ['./product-detail.component.css']
 })
+
 export class ProductDetailComponent implements OnInit {
   /** Product data to be displayed */
   product?: Product;
@@ -52,5 +53,12 @@ export class ProductDetailComponent implements OnInit {
    */
   goBack() {
     this.router.navigate(['/products']);
+  }
+
+  /**
+   * Navigates to the shopping cart page.
+   */
+  goToCart() {
+    this.router.navigate(['/shopping-cart']);
   }
 }
